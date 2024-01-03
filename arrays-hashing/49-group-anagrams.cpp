@@ -10,9 +10,7 @@ public:
             mp[cpy].push_back(s);
         }
         for(auto v:mp)
-        {
             answer.push_back(v.second);
-        }
         return answer;
     }
 };
