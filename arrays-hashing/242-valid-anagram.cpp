@@ -1,4 +1,4 @@
-//simple code
+// Simple code
 class Solution
 {
 public:
@@ -13,3 +13,30 @@ public:
         return s==t;
     }
 };
+// This code is more efficient
+/*
+class Solution
+{
+public:
+    bool isAnagram(string s, string t)
+    {
+        int freq[26] = {0};
+        if (s.length() != t.length())
+            return false;
+        for(char i:s)
+        {
+            freq[i-'a']++;
+        }
+        for(char i:t)
+        {
+            freq[i-'a']--;
+        }
+        for(auto i:freq)
+        {
+            if(i!=0)
+                return 0;
+        }
+        return 1;
+    }
+};
+*/
